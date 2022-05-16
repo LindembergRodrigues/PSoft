@@ -14,15 +14,16 @@ public class RepLote {
     }
 
     public void edita(Lote lote){
-        repositorio.replace(lote.getId(),lote);
+        repositorio.replace(lote.getId(),lote);        
     }   
 
-    public void recuperar(){
-
+    public Lote recuperar(String id){
+        return repositorio.get(id);
     }
 
     public void remover( String id){
-
+        repositorio.remove(id);
     }
 
+    // verificar necessidade de toString()
 }
